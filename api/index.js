@@ -10,6 +10,7 @@ const app = express();
 //importing routes
 const userRoute = require('./routes/user')
 const authRoute = require('./routes/auth')
+const postRoute = require('./routes/post')
 
 mongoose.connect(process.env.MONGO_URL)
   .then(() => console.log("Connected to MongoDB!"))
@@ -24,6 +25,7 @@ app.use(morgan("common"));
 //setting up routes
 app.use('/api/users', userRoute);
 app.use('/api/auth', authRoute);
+app.use('/api/posts', postRoute);
 
 
 
