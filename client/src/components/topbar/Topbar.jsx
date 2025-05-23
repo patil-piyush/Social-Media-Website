@@ -6,7 +6,7 @@ const Topbar = () => {
   return (
     <div className='topbar-Container'>
       <div className="topbarLeft">
-        <Link to="/">
+        <Link to="/" style={{textDecoration:"none"}}>
           <span className="logo">Lamasocial</span>
         </Link>
       </div>
